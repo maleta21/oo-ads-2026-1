@@ -25,10 +25,10 @@ public class pessoa {
     public String exibirDados() {
         // \n significa quebra de linha
         return "Nome: " + this.nome +
-                "\nIdade:" + this.idade +
-                "\nCPF:" + this.cpf +
-                "\nE-mail:" + this.email +
-                "\nTelefone:" + this.telefone;
+                "\nIdade: " + this.idade +
+                "\nCPF: " + this.cpf +
+                "\nE-mail: " + this.email +
+                "\nTelefone: " + this.telefone;
 
     }
 }
