@@ -1,4 +1,5 @@
-
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
@@ -41,6 +42,44 @@ public class Main {
 
         // Exibindo novamente os dados para conferir as alterações feitas
         System.out.println(pessoa1.exibirDados());
+
+        System.out.println("*".repeat(80));
+
+        // Vamos criar o primeiro objeto da classe funcionario
+        Funcionario func1 = new Funcionario();
+
+        // Dando valor aos atributos do funcionario
+        // (inclui atributos herdados de Pessoa)
+        func1.nome = "Veneranda Vieira";
+        func1.idade =26;
+        func1.cpf = "987.654.321-09";
+        func1.email = "veneranda@gmail.com.br";
+        func1.telefone = "(36) 91234-5678";
+        //---//
+        func1.matricula = "F0123";
+        func1.cargo = "Assistente Financeiro";
+        func1.salarioBase = 3500.00;
+        func1.departamento = "gerencia Financeira";
+        func1.dataAdmissao = new Date();
+
+        // Exibindo os dados do funcionário
+        System.out.println(func1.exibirDados());
+
+        System.out.println("-".repeat((80)));
+
+        func1.fazerAniversario();
+
+        // Exibindo os dados novamente para verificar mudança de idade
+        System.out.println(func1.exibirDados());
+
+        System.out.println("-".repeat(80));
+
+        //Calculando o salario de veneranda
+        Double salarioFinal = func1.calcularSalario();
+        System.out.println("Salario calculado para " + func1.nome + ": R$ " + salarioFinal);
+    }
+
+    public static void teste01() {
 
     }
 }
