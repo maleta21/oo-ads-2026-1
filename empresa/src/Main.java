@@ -6,7 +6,8 @@ public class Main {
     public static void main(String[] args) {
 //        teste01();
 //        teste02();
-          teste03();
+//        teste03();
+          prova1();
     }
 
     public static void teste01() {
@@ -114,51 +115,112 @@ public class Main {
 //        System.out.println(f.exibirDados());
     }
 
-    public static void teste03() {
+//    public static void teste03() {
+//
+//        System.out.println("=== CONTAS NORMAIS ===");
+//
+//        ContaBancaria c1 = new ContaBancaria("Matheus", 1000.0);
+//        ContaBancaria c2 = new ContaBancaria("João", 2000.0);
+//        ContaBancaria c3 = new ContaBancaria("Maria", 3000.0);
+//
+//        c1.depositar(500.0);
+//        c1.sacar(200.0);
+//
+//        c2.depositar(300.0);
+//        c2.sacar(1000.0);
+//
+//        c3.depositar(1000.0);
+//        c3.sacar(500.0);
+//
+//        c1.exibirSaldo();
+//        c2.exibirSaldo();
+//        c3.exibirSaldo();
+//
+//
+//        System.out.println("\n=== CONTAS ESPECIAIS ===");
+//
+//        ContaEspecial e1 = new ContaEspecial("Carlos", 1000.0, 500.0);
+//        ContaEspecial e2 = new ContaEspecial("Ana", 2000.0, 1000.0);
+//        ContaEspecial e3 = new ContaEspecial("Lucas", 3000.0, 1500.0);
+//
+//        e1.depositar(200.0);
+//        e1.sacar(300.0);
+//
+//        e2.depositar(500.0);
+//        e2.sacar(2500.0);
+//
+//        e3.depositar(1000.0);
+//        e3.sacar(2000.0);
+//
+//        // saldo com limite
+//        e1.exibirSaldo();
+//        e2.exibirSaldo();
+//        e3.exibirSaldo();
+//
+//        // saldo real
+//        e1.exibirSaldoReal();
+//        e2.exibirSaldoReal();
+//        e3.exibirSaldoReal();
+//    }
 
-        System.out.println("=== CONTAS NORMAIS ===");
+    public static void prova1() {
 
-        ContaBancaria c1 = new ContaBancaria("Matheus", 1000.0);
-        ContaBancaria c2 = new ContaBancaria("João", 2000.0);
-        ContaBancaria c3 = new ContaBancaria("Maria", 3000.0);
+        System.out.println("\n=== TESTE ESTUDANTES ===");
 
-        c1.depositar(500.0);
-        c1.sacar(200.0);
+        Estudante e1 = new Estudante(
+                "Carlos",
+                20,
+                "111.111.111-11",
+                "carlos@gmail.com",
+                "(16)11111-1111",
+                "Rh"
+        );
+        e1.nota1 = 7.0;
+        e1.nota2 = 8.0;
 
-        c2.depositar(300.0);
-        c2.sacar(1000.0);
+        Estudante e2 = new Estudante(
+                "Ana",
+                22,
+                "222.222.222-22",
+                "ana@gmail.com",
+                "(16)22222-2222",
+                "Engenharia"
+        );
+        e2.nota1 = 5.0;
+        e2.nota2 = 6.0;
 
-        c3.depositar(1000.0);
-        c3.sacar(500.0);
+        Estudante e3 = new Estudante(
+                "João",
+                19,
+                "333.333.333-33",
+                "joao@gmail.com",
+                "(16)33333-3333",
+                "Direito"
+        );
+        e3.nota1 = 4.0;
+        e3.nota2 = 5.0;
 
-        c1.exibirSaldo();
-        c2.exibirSaldo();
-        c3.exibirSaldo();
+        Estudante e4 = new Estudante(
+                "Matheus Gondim Martins",
+                21,
+                "460.038.468-79",
+                "matheus20041126@gmail.com",
+                "(16)98859-8937",
+                "Análise e Desenvolvimento de Sistemas"
+        );
+        e4.nota1 = 10.0;
+        e4.nota2 = 9.5;
 
+        System.out.println("\n--- Estudante 1 ---");
+        System.out.println(e1.exibirDados());
 
-        System.out.println("\n=== CONTAS ESPECIAIS ===");
+        System.out.println("\n--- Estudante 2 ---");
+        System.out.println(e2.exibirDados());
 
-        ContaEspecial e1 = new ContaEspecial("Carlos", 1000.0, 500.0);
-        ContaEspecial e2 = new ContaEspecial("Ana", 2000.0, 1000.0);
-        ContaEspecial e3 = new ContaEspecial("Lucas", 3000.0, 1500.0);
+        System.out.println("\n--- Estudante 3 ---");
+        System.out.println(e3.exibirDados());
 
-        e1.depositar(200.0);
-        e1.sacar(300.0);
-
-        e2.depositar(500.0);
-        e2.sacar(2500.0);
-
-        e3.depositar(1000.0);
-        e3.sacar(2000.0);
-
-        // saldo com limite
-        e1.exibirSaldo();
-        e2.exibirSaldo();
-        e3.exibirSaldo();
-
-        // saldo real
-        e1.exibirSaldoReal();
-        e2.exibirSaldoReal();
-        e3.exibirSaldoReal();
+        System.out.println("\n--- Estudante 4 ---");
+        System.out.println(e4.exibirDados());
     }
 }
