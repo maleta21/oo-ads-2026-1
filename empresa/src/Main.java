@@ -7,7 +7,8 @@ public class Main {
 //        teste01();
 //        teste02();
 //        teste03();
-          prova1();
+//         prova1();
+          teste04();
     }
 
     public static void teste01() {
@@ -163,64 +164,87 @@ public class Main {
 //        e3.exibirSaldoReal();
 //    }
 
-    public static void prova1() {
+//    public static void prova1() {
+//
+//        System.out.println("\n=== TESTE ESTUDANTES ===");
+//
+//        Estudante e1 = new Estudante(
+//                "Carlos",
+//                20,
+//                "111.111.111-11",
+//                "carlos@gmail.com",
+//                "(16)11111-1111",
+//                "Rh"
+//        );
+//        e1.nota1 = 7.0;
+//        e1.nota2 = 8.0;
+//
+//        Estudante e2 = new Estudante(
+//                "Ana",
+//                22,
+//                "222.222.222-22",
+//                "ana@gmail.com",
+//                "(16)22222-2222",
+//                "Engenharia"
+//        );
+//        e2.nota1 = 5.0;
+//        e2.nota2 = 6.0;
+//
+//        Estudante e3 = new Estudante(
+//                "João",
+//                19,
+//                "333.333.333-33",
+//                "joao@gmail.com",
+//                "(16)33333-3333",
+//                "Direito"
+//        );
+//        e3.nota1 = 4.0;
+//        e3.nota2 = 5.0;
+//
+//        Estudante e4 = new Estudante(
+//                "Matheus Gondim Martins",
+//                21,
+//                "460.038.468-79",
+//                "matheus20041126@gmail.com",
+//                "(16)98859-8937",
+//                "Análise e Desenvolvimento de Sistemas"
+//        );
+//        e4.nota1 = 10.0;
+//        e4.nota2 = 9.5;
+//
+//        System.out.println("\n--- Estudante 1 ---");
+//        System.out.println(e1.exibirDados());
+//
+//        System.out.println("\n--- Estudante 2 ---");
+//        System.out.println(e2.exibirDados());
+//
+//        System.out.println("\n--- Estudante 3 ---");
+//        System.out.println(e3.exibirDados());
+//
+//        System.out.println("\n--- Estudante 4 ---");
+//        System.out.println(e4.exibirDados());
+//    }
 
-        System.out.println("\n=== TESTE ESTUDANTES ===");
+    public static void teste04() {
+        ContaBancaria c1 = new ContaBancaria(987, "Zeferino Zacarias", 500.00);
+        c1.exibirSaldo();
 
-        Estudante e1 = new Estudante(
-                "Carlos",
-                20,
-                "111.111.111-11",
-                "carlos@gmail.com",
-                "(16)11111-1111",
-                "Rh"
-        );
-        e1.nota1 = 7.0;
-        e1.nota2 = 8.0;
+        c1.sacar(350.00);
+        c1.exibirSaldo();
 
-        Estudante e2 = new Estudante(
-                "Ana",
-                22,
-                "222.222.222-22",
-                "ana@gmail.com",
-                "(16)22222-2222",
-                "Engenharia"
-        );
-        e2.nota1 = 5.0;
-        e2.nota2 = 6.0;
+        // Atributo "saldo" foi privatizado
+        // Mudanças no saldo agora só podem ser feitas por meio dos
+        // métodos depositar() e sacar()
+        //c1.saldo = -100.00;
+        //c1.exibirSaldo();
 
-        Estudante e3 = new Estudante(
-                "João",
-                19,
-                "333.333.333-33",
-                "joao@gmail.com",
-                "(16)33333-3333",
-                "Direito"
-        );
-        e3.nota1 = 4.0;
-        e3.nota2 = 5.0;
+        c1.depositar(200.00);
+        c1.exibirSaldo();
 
-        Estudante e4 = new Estudante(
-                "Matheus Gondim Martins",
-                21,
-                "460.038.468-79",
-                "matheus20041126@gmail.com",
-                "(16)98859-8937",
-                "Análise e Desenvolvimento de Sistemas"
-        );
-        e4.nota1 = 10.0;
-        e4.nota2 = 9.5;
+        ContaBancaria c2 = new ContaBancaria(654, "Yuri Yamashita", 850.00);
+        c2.exibirSaldo();
 
-        System.out.println("\n--- Estudante 1 ---");
-        System.out.println(e1.exibirDados());
-
-        System.out.println("\n--- Estudante 2 ---");
-        System.out.println(e2.exibirDados());
-
-        System.out.println("\n--- Estudante 3 ---");
-        System.out.println(e3.exibirDados());
-
-        System.out.println("\n--- Estudante 4 ---");
-        System.out.println(e4.exibirDados());
+        c2.setNumConta(40);
+        System.out.println("Conta de %s agora tem o número %d.".formatted(c2.titular, c2.getNumConta()));
     }
 }
