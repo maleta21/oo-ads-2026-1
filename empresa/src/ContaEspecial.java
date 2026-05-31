@@ -6,7 +6,7 @@ public class ContaEspecial extends ContaBancaria {
     // Construtor personalizado
     public ContaEspecial(
             Integer numConta,
-            String titular,
+            Pessoa titular,
             Double saldoInicial,
             Double limite
     ) {
@@ -31,7 +31,7 @@ public class ContaEspecial extends ContaBancaria {
     public void exibirSaldo() {
         String msg = "Saldo da conta ESPECIAL nº %d de %s é R$ %.2f".formatted(
                 this.getNumConta(),
-                this.getTitular(),
+                this.getTitular().getNome(),
                 this.getSaldo() + this.getLimite()
         );
         System.out.println(msg);
@@ -40,7 +40,7 @@ public class ContaEspecial extends ContaBancaria {
     public void exibirSaldoReal() {
         String msg = "Saldo (real) da conta ESPECIAL nº %d de %s é R$ %.2f".formatted(
                 this.getNumConta(),
-                this.getTitular(),
+                this.getTitular().getNome(),
                 this.getSaldo()
         );
         System.out.println(msg);
